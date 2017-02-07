@@ -1,0 +1,69 @@
+Con menu
+  -> Tat ca.
+
+
+
+
+
+
+Link : http://khoahoc.nhodalat.com/search
+  => Lấy thêm cho mình trường price.
+->ok
+
+/******************************************************************/
+Link : http://khoahoc.nhodalat.com/chude
+  => Thêm tham số truyền lên là tên ngành : ví dụ như CNTT, TiếngAnh
+  => ex : http://khoahoc.nhodalat.com/chude?nganh=CNTT
+
+
+
+/******************************************************************/
+Link : http://khoahoc.nhodalat.com/chudebyparam?name=Đồ họa - Thiết kế
+  => Thiếu tham số page, phân trang để loadmore.
+->ok
+
+
+/******************************************************************/
+Lấy thêm cho mình TopNganhHot
+  - Các trường cần lấy: idNganh, nameNganh, imageNganh
+  - Chỉ lấy top 5 ngành , dựa vào số lượng đăng ký khoá học của ngành đó.
+  - Hình ảnh thì lấy các link bên dưới.
+
+[
+  {
+    "id":"1",
+    "name":"IT_CNTT",
+    "image": "http://image.khaigiang.vn/feature/top-khoa-hoc-lap-trinh/picture/thumbnail/158x104/882048laptrinh.jpg",
+  },
+  {
+    "id":"2",
+    "name":"Kinh tế - Quản lý",
+    "image": "http://image.khaigiang.vn/feature/top-khoa-hoc-marketing/picture/thumbnail/158x104/181052top_marketing.jpg",
+  },
+  {
+    "id":"3",
+    "name":"Tiếng Anh",
+    "image": "http://image.khaigiang.vn/feature/top-khoa-hoc-tieng-anh/picture/thumbnail/158x104/378903top_english.jpg",
+  }
+]
+
+
+
+
+/******************************************************************/
+Link đăng ký khoá học:
+  - Miêu tả:
+    Nếu đã login facebook, thông tin người dùng sẽ mặc định hiện trong form đăng kí (có thể sửa đc).
+
+    Nếu chưa login thì để form trắng cho khách hàng tự nhập vào.Trường hợp này mình sẽ lưu thông tin họ đã đăng kí, và đương nhiên sẽ ko lưu đc idFB của tài khoản nào.
+
+    (Cột idFB đăng kí khoá học trường hợp này là null)
+
+  - method: post
+  - các tham số truyền lên và insert database:
+    + idFB: Có hoặc null.
+    + name: có.
+    + phone: có.
+    + email: có.
+
+/******************************************************************/
